@@ -17,7 +17,6 @@ hx example.scm
     > framework within which we organize our ideas about processes.
     > Thus, any powerful programming language should be able to describe primitive data and
     > primitive procedures and should have methods for combining and abstracting procedures and data.
-    - 그러기 위해 언어가 제공해야하는 것들
     - primitive expressions: 언어가 다루는 가장 단순한 개체들을 나타냄
     - means of combination: 더 단순한 것들로부터 복합 요소들을 만드는 방법
     - means of abstraction: 복합 요소들에 이름을 붙여서 하나의 단위로 다룰 수 있게 하는 방법
@@ -88,7 +87,10 @@ hx example.scm
     (define (>= x y)
       (not (< x y)))
     ```
-  - [ ] 1.1.7 Example: Square Roots by Newton's Method
+  - [x] 1.1.7 Example: Square Roots by Newton's Method
+    - 함수와 절차의 차이는 사물의 속성을 기술하는 것과 일을 어떻게 하는지를 기술하는 것의 구별의 함의 이다.
+    - 수학적 정의는 "무엇인지"를 말하지만, 컴퓨터 프로그램은 "어떻게 할지"를 명시해야 한다.
+    - [newton 제곱근](./chapter01/newton_sqrt.scm) 을 보면, 루프 없이 재귀만으로 반복을 구현한다는것을 알려준다. 
   - [ ] 1.1.8 Procedures as Black-Box Abstractions
 - [ ] 1.2 Procedures and the Processes They Generate
   - [ ] 1.2.1 Linear Recursion and Iteration
