@@ -1,4 +1,4 @@
-## 0. Prerequisize
+## 0. Prerequisite
 
 ```bash
 brew install racket # install racket
@@ -12,20 +12,20 @@ hx example.scm
 ```
 ## 1. Building Abstractions with Procedures
 - [ ] 1.1 The Elements of Programming
-    >> A powerful programming language is more than just a means for in-
-    >> structing a computer to perform tasks. The language also serves as a
-    >> framework within which we organize our ideas about processes.
-    >> Thus, any powerful programming language should be able to describe primitive data and
-    >> primitive procedures and should have methods for combining and abstracting procedures and data.
+    > A powerful programming language is more than just a means for in-
+    > structing a computer to perform tasks. The language also serves as a
+    > framework within which we organize our ideas about processes.
+    > Thus, any powerful programming language should be able to describe primitive data and
+    > primitive procedures and should have methods for combining and abstracting procedures and data.
     - 그러기 위해 언어가 제공해야하는 것들
     - primitive expressions: 언어가 다루는 가장 단순한 개체들을 나타냄
     - means of combination: 더 단순한 것들로부터 복합 요소들을 만드는 방법
     - means of abstraction: 복합 요소들에 이름을 붙여서 하나의 단위로 다룰 수 있게 하는 방법
   - [x] 1.1.1 Expressions
   - [x] 1.1.2 Naming and the Environment
-    >> A critical aspect of a programming language is the means
-    >> it provides for using names to refer to computational objects.
-    >> We say that the name identifies a variable whose value is the object.
+    > A critical aspect of a programming language is the means
+    > it provides for using names to refer to computational objects.
+    > We say that the name identifies a variable whose value is the object.
 
     ```lisp
       > (define pi 3.14159)
@@ -34,7 +34,7 @@ hx example.scm
       > circumference
     ```
   - [x] 1.1.3 Evaluating Combinations
-    >> One of our goals in this chapter is to isolate issues about thinking procedurally. As a case in point, let us consider that, in evaluating combinations, the interpreter is itself following a procedure. To evaluate a combination, do the following:
+    > One of our goals in this chapter is to isolate issues about thinking procedurally. As a case in point, let us consider that, in evaluating combinations, the interpreter is itself following a procedure. To evaluate a combination, do the following:
     1. Evaluate the subexpressions of the combination.
     2. Apply the procedure that is the value of the leftmost subexpres-sion (the operator) to the arguments that are the values of the other subexpressions (the operands).
     > 값을 평가하는데 있어 재귀가 매우 자연스럽게 녹아있다. 복잡해질 수 있는 복합적인 연산을 재귀는 매우 단순하게 표현한다.
@@ -220,12 +220,3 @@ hx example.scm
 
 ---
 
-### Progress Summary
-
-- **Chapter 1**: [ ] Complete
-- **Chapter 2**: [ ] Complete
-- **Chapter 3**: [ ] Complete
-- **Chapter 4**: [ ] Complete
-- **Chapter 5**: [ ] Complete
-
-**Overall Progress**: ⬜ 0% (0/82 sections completed)
