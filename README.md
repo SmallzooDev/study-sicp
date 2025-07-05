@@ -92,6 +92,12 @@ hx example.scm
     - 수학적 정의는 "무엇인지"를 말하지만, 컴퓨터 프로그램은 "어떻게 할지"를 명시해야 한다.
     - [newton 제곱근](./chapter01/newton_sqrt.scm) 을 보면, 루프 없이 재귀만으로 반복을 구현한다는것을 알려준다. 
   - [ ] 1.1.8 Procedures as Black-Box Abstractions
+    - procedure와 sub-procedure가 있을 때 sub-procedure는 blackbox여야 한다.
+    - 위와 같은 상대적인 제약이 아니더라도 궁극적으로는 procedure의 내부 구현은 blackbox여야 한다.
+    - 그러기 위해 procedure의 formal parameters는 body에 로컬로 바인딩 되어있다. (그 반대는 free variable)
+    - 그리고 서브 프로시져를 노출 할 필요가 없다면, namespace의 혼란을 막기 위해 internal로 둘 수 있다.
+    - 내부 절차들이 외부 절차의 매개변수나 변수에 접근할 수 있는 것은 렉시컬 스코프 규칙 때문이다. 이는 변수의 바인딩이 코드의 텍스트 구조에 의해 결정되어, 중첩된 절차가 자신을 둘러싼 환경의 변수들을 자유롭게 참조할 수 있게 한다
+    - 자세한 예시 (scope)[./chapter01/scope.scm]
 - [ ] 1.2 Procedures and the Processes They Generate
   - [ ] 1.2.1 Linear Recursion and Iteration
   - [ ] 1.2.2 Tree Recursion
