@@ -79,8 +79,8 @@ hx example.scm
           (- x)
           x))
     ```
-    - `(if <predicate> <consequent> <alternative>)`
     ```lisp
+    ; (if <predicate> <consequent> <alternative>)
     (and (> x 5) (< x 10))
     (define (>= x y)
       (or (> x y) (= x y)))
@@ -91,7 +91,7 @@ hx example.scm
     - 함수와 절차의 차이는 사물의 속성을 기술하는 것과 일을 어떻게 하는지를 기술하는 것의 구별의 함의 이다.
     - 수학적 정의는 "무엇인지"를 말하지만, 컴퓨터 프로그램은 "어떻게 할지"를 명시해야 한다.
     - [newton 제곱근](./chapter01/newton_sqrt.scm) 을 보면, 루프 없이 재귀만으로 반복을 구현한다는것을 알려준다. 
-  - [ ] 1.1.8 Procedures as Black-Box Abstractions
+  - [x] 1.1.8 Procedures as Black-Box Abstractions
     - procedure와 sub-procedure가 있을 때 sub-procedure는 blackbox여야 한다.
     - 위와 같은 상대적인 제약이 아니더라도 궁극적으로는 procedure의 내부 구현은 blackbox여야 한다.
     - 그러기 위해 procedure의 formal parameters는 body에 로컬로 바인딩 되어있다. (그 반대는 free variable)
