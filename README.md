@@ -11,7 +11,7 @@ racket -I sicp # to start scheme as interpreter mode
 hx example.scm
 ```
 ## 1. Building Abstractions with Procedures
-- [ ] 1.1 The Elements of Programming
+- [x] 1.1 The Elements of Programming
     > A powerful programming language is more than just a means for in-
     > structing a computer to perform tasks. The language also serves as a
     > framework within which we organize our ideas about processes.
@@ -64,7 +64,7 @@ hx example.scm
     (+ 36 100)
     ```
     > lisp 에서는 전자를 택한다. '평가'후 '치환'을 하는 것 만으로 (+ 5 1), (* 5 2)와 같은 계산의 횟수가 줄어든 것을 볼 수 있다.
-  - [ ] 1.1.6 Conditional Expressions and Predicates
+  - [x] 1.1.6 Conditional Expressions and Predicates
     ```lisp
     (define (abs x)
       (cond ((> x 0) x)
@@ -99,7 +99,36 @@ hx example.scm
     - 내부 절차들이 외부 절차의 매개변수나 변수에 접근할 수 있는 것은 렉시컬 스코프 규칙 때문이다. 이는 변수의 바인딩이 코드의 텍스트 구조에 의해 결정되어, 중첩된 절차가 자신을 둘러싼 환경의 변수들을 자유롭게 참조할 수 있게 한다
     - 자세한 예시 (scope)[./chapter01/scope.scm]
 - [ ] 1.2 Procedures and the Processes They Generate
+  - A procedure is a pattern for the local evolution of a computational process. It specifies how each stage of the process is built upon the previous stage. We would like to be able to make statements about the overall, or global, behavior of a process whose local evolution has been specified by a procedure. This is very difficult to do in general, but we can at least try to describe some typical patterns of process evolution.
   - [ ] 1.2.1 Linear Recursion and Iteration
+    - (재귀의 방식 vs iter 방식)[./chapter01/factorial.scm]
+    ```scheme
+      ; This type of process, characterized by a chain of deferred operations, is called a recursive process.
+      (factorial 6)
+      (* 6 (factorial 5))
+      (* 6 (* 5 (factorial 4)))
+      (* 6 (* 5 (* 4 (factorial 3))))
+      (* 6 (* 5 (* 4 (* 3 (factorial 2)))))
+      (* 6 (* 5 (* 4 (* 3 (* 2 (factorial 1))))))
+      (* 6 (* 5 (* 4 (* 3 (* 2 1)))))
+      (* 6 (* 5 (* 4 (* 3 2))))
+      (* 6 (* 5 (* 4 6)))
+      (* 6 (* 5 24))
+      (* 6 120)
+      720
+      ; iter
+      (factorial 6)
+      (fact-iter 1 1 6)
+      (fact-iter 1 2 6)
+      (fact-iter 2 3 6)
+      (fact-iter 6 4 6)
+      (fact-iter 24 5 6)
+      (fact-iter 120 6 6)
+      (fact-iter 720 7 6)
+      720
+    ```
+    - 재귀와 같은 process는 인터프리터가 지연 평가될 operation들을 추적해야하고, 그 추적해야 하는 갯수는 해당 input이 n개라면 n번 늘어나기에 선형 재귀라고 이야기한다.
+    - 반면 후자의 경우는 지금 단계의 지금 단계의 변수들만 추적하면 된다. 이러한 경우를 iterative process 라고 한다. (결과적으로 이터레이터에서는 process가 줄어들거나 늘어나지 않는다, 고정된 크기의 변수들과, 그 변수를 어떻게 업데이트 할지에 대한 룰, 종료와 관련된 조건들이 전부이다)
   - [ ] 1.2.2 Tree Recursion
   - [ ] 1.2.3 Orders of Growth
   - [ ] 1.2.4 Exponentiation
