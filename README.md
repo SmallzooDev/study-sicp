@@ -98,9 +98,9 @@ hx example.scm
     - 그리고 서브 프로시져를 노출 할 필요가 없다면, namespace의 혼란을 막기 위해 internal로 둘 수 있다.
     - 내부 절차들이 외부 절차의 매개변수나 변수에 접근할 수 있는 것은 렉시컬 스코프 규칙 때문이다. 이는 변수의 바인딩이 코드의 텍스트 구조에 의해 결정되어, 중첩된 절차가 자신을 둘러싼 환경의 변수들을 자유롭게 참조할 수 있게 한다
     - 자세한 예시 (scope)[./chapter01/scope.scm]
-- [ ] 1.2 Procedures and the Processes They Generate
+- [x] 1.2 Procedures and the Processes They Generate
   - A procedure is a pattern for the local evolution of a computational process. It specifies how each stage of the process is built upon the previous stage. We would like to be able to make statements about the overall, or global, behavior of a process whose local evolution has been specified by a procedure. This is very difficult to do in general, but we can at least try to describe some typical patterns of process evolution.
-  - [ ] 1.2.1 Linear Recursion and Iteration
+  - [x] 1.2.1 Linear Recursion and Iteration
     - (재귀의 방식 vs iter 방식)[./chapter01/factorial.scm]
     ```scheme
       ; This type of process, characterized by a chain of deferred operations, is called a recursive process.
@@ -129,7 +129,7 @@ hx example.scm
     ```
     - 재귀와 같은 process는 인터프리터가 지연 평가될 operation들을 추적해야하고, 그 추적해야 하는 갯수는 해당 input이 n개라면 n번 늘어나기에 선형 재귀라고 이야기한다.
     - 반면 후자의 경우는 지금 단계의 지금 단계의 변수들만 추적하면 된다. 이러한 경우를 iterative process 라고 한다. (결과적으로 이터레이터에서는 process가 줄어들거나 늘어나지 않는다, 고정된 크기의 변수들과, 그 변수를 어떻게 업데이트 할지에 대한 룰, 종료와 관련된 조건들이 전부이다)
-  - [ ] 1.2.2 Tree Recursion
+  - [x] 1.2.2 Tree Recursion
   - [ ] 1.2.3 Orders of Growth
   - [ ] 1.2.4 Exponentiation
   - [ ] 1.2.5 Greatest Common Divisors
