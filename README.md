@@ -130,7 +130,7 @@ hx example.scm
     - 재귀와 같은 process는 인터프리터가 지연 평가될 operation들을 추적해야하고, 그 추적해야 하는 갯수는 해당 input이 n개라면 n번 늘어나기에 선형 재귀라고 이야기한다.
     - 반면 후자의 경우는 지금 단계의 지금 단계의 변수들만 추적하면 된다. 이러한 경우를 iterative process 라고 한다. (결과적으로 이터레이터에서는 process가 줄어들거나 늘어나지 않는다, 고정된 크기의 변수들과, 그 변수를 어떻게 업데이트 할지에 대한 룰, 종료와 관련된 조건들이 전부이다)
   - [x] 1.2.2 Tree Recursion
-  - [ ] 1.2.3 Orders of Growth
+  - [x] 1.2.3 Orders of Growth
   - [ ] 1.2.4 Exponentiation
   - [ ] 1.2.5 Greatest Common Divisors
   - [ ] 1.2.6 Example: Testing for Primality
