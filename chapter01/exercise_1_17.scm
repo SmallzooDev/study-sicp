@@ -1,10 +1,4 @@
-#lang sicp
-
-(define (mult a b)
-  (mult-iter a b 0))
-
-(define (mult-iter a b c)
-  (cond
-   ((= b 0) c)
-   ((even? b) (mult-iter (double a) (halve b) c))  
-   (else (mult-iter a (- b 1) (+ c a)))))
+(define (fast-mult a b)
+  (cond ((= b 0) 0)
+        ((even? b) (double (fast-mult a (halve b))))
+        (else (+ a (fast-mult a (- b 1))))))
