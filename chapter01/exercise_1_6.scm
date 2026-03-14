@@ -4,6 +4,9 @@
   (cond (predicate then-clause)
         (else else-clause)))
 
+(define (good-enough? guess x)
+  (< (abs (- (square guess) x)) 0.001))
+
 (define (sqrt-iter guess x)
   (new-if (good-enough? guess x)
           guess
