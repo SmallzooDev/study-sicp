@@ -88,6 +88,7 @@ hx example.scm
       (not (< x y)))
     ```
   - [x] 1.1.7 Example: Square Roots by Newton's Method
+    > 프로그래밍이란 결국 선언적 지식("what is")을 명령적 지식("how to")으로 바꾸는 일
     - 함수와 절차의 차이는 사물의 속성을 기술하는 것과 일을 어떻게 하는지를 기술하는 것의 구별의 함의 이다.
     - 수학적 정의는 "무엇인지"를 말하지만, 컴퓨터 프로그램은 "어떻게 할지"를 명시해야 한다.
     - [newton 제곱근](./chapter01/newton_sqrt.scm) 을 보면, 루프 없이 재귀만으로 반복을 구현한다는것을 알려준다. 

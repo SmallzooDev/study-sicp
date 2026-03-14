@@ -14,8 +14,13 @@
      (* guess 0.001)))
 
 (define (cbrt-iter guess previous-guess x)
-  (if (good-enough? guess preious-guess)
+  (if (good-enough? guess previous-guess)
       guess
       (cbrt-iter (improve guess x)
                  guess
                  x)))
+
+(define (cbrt x)
+  (cbrt-iter 1.0 0.0 x))
+
+(cbrt 27)
