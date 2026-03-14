@@ -1,9 +1,9 @@
 #lang sicp
 
-(define (p) (p))
-(define (test x y) (if (= x 0) 0 y))
+; (define (p) (p))
+; (define (test x y) (if (= x 0) 0 y))
 
-(test 0 (p))
+; (test 0 (p))
 
 ; on normal
 ; (if (= 0 0) 0 (p)) 여기서 더이상 전개하지 않음ret 0
